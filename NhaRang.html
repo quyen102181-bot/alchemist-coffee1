@@ -1,0 +1,496 @@
+<!doctype html>
+
+<html class="dark" lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;700;800&amp;family=Manrope:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface-variant": "#d6c3b3",
+              "on-surface": "#dbe5df",
+              "surface-container-lowest": "#07100d",
+              "tertiary-fixed-dim": "#d4c5aa",
+              "surface-variant": "#2d3733",
+              error: "#ffb4ab",
+              "inverse-on-surface": "#29322f",
+              "on-primary-container": "#5a3400",
+              primary: "#ffb869",
+              "secondary-fixed": "#ffdbcb",
+              tertiary: "#d4c5aa",
+              secondary: "#fdb795",
+              "tertiary-container": "#b4a68d",
+              "secondary-fixed-dim": "#fdb795",
+              "on-background": "#dbe5df",
+              "surface-tint": "#ffb869",
+              outline: "#9e8e7f",
+              "on-tertiary-fixed": "#221b09",
+              "on-error-container": "#ffdad6",
+              "surface-container-highest": "#2d3733",
+              "on-primary-fixed-variant": "#673d00",
+              "surface-container": "#18211e",
+              "on-error": "#690005",
+              "on-secondary-fixed-variant": "#6a3a21",
+              "on-tertiary-container": "#453c28",
+              "primary-fixed-dim": "#ffb869",
+              "primary-fixed": "#ffdcbb",
+              "on-secondary-fixed": "#341100",
+              "on-secondary-container": "#eda988",
+              "tertiary-fixed": "#f1e1c5",
+              "surface-container-low": "#141d1a",
+              "surface-container-high": "#232c29",
+              "outline-variant": "#514438",
+              "inverse-primary": "#875204",
+              "secondary-container": "#6d3c23",
+              "surface-dim": "#0c1512",
+              "on-primary-fixed": "#2b1700",
+              "error-container": "#93000a",
+              "primary-container": "#dd9a4c",
+              "on-tertiary-fixed-variant": "#504631",
+              surface: "#0c1512",
+              "inverse-surface": "#dbe5df",
+              "on-tertiary": "#382f1d",
+              "on-secondary": "#4f250d",
+              background: "#0c1512",
+              "surface-bright": "#323b38",
+              "on-primary": "#482900",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            fontFamily: {
+              headline: ["Epilogue"],
+              display: ["Epilogue"],
+              body: ["Manrope"],
+              label: ["Manrope"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      body {
+        background-color: #0c1512;
+        color: #dbe5df;
+      }
+    </style>
+  </head>
+  <body class="font-body selection:bg-primary selection:text-on-primary">
+    <nav
+      class="w-full top-0 sticky z-50 bg-surface/90 dark:bg-surface/90 backdrop-blur-xl"
+    >
+      <div
+        class="flex justify-between items-center w-full px-8 py-6 max-w-screen-2xl mx-auto"
+      >
+        <div
+          class="text-2xl font-headline font-bold tracking-tighter text-primary"
+        >
+          Alchemist Coffee
+        </div>
+        <div class="hidden md:flex gap-10">
+          <a
+            class="font-label uppercase tracking-widest text-xs text-on-surface-variant font-medium hover:text-primary transition-colors"
+            href="GiaoCaPhe.html"
+            >Thực Đơn</a
+          >
+          <a
+            class="font-label uppercase tracking-widest text-xs text-primary font-bold border-b border-primary pb-1"
+            href="NhaRang.html"
+            >Nhà Rang</a
+          >
+          <a
+            class="font-label uppercase tracking-widest text-xs text-on-surface-variant font-medium hover:text-primary transition-colors"
+            href="CauChuyen.html"
+            >Câu Chuyện</a
+          >
+          <a
+            class="font-label uppercase tracking-widest text-xs text-on-surface-variant font-medium hover:text-primary transition-colors"
+            href="NhatKy.html"
+            >Nhật Ký</a
+          >
+        </div>
+        <div class="flex items-center gap-6">
+          <button
+            class="material-symbols-outlined text-on-surface hover:text-primary transition-all"
+          >
+            shopping_bag
+          </button>
+          <button
+            class="bg-primary text-on-primary px-6 py-2 rounded-full font-label uppercase tracking-widest text-[10px] font-bold hover:scale-95 transition-transform"
+          >
+            Mua Ngay
+          </button>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section
+        class="relative h-[870px] flex items-center justify-center overflow-hidden"
+      >
+        <div class="absolute inset-0 z-0">
+          <img
+            class="w-full h-full object-cover opacity-60"
+            data-alt="A cinematic, low-light shot of a professional coffee roasting facility. Gleaming copper and matte black roasting machines stand as central figures in a vast industrial space with high ceilings and exposed concrete walls. Soft amber light catches the rising steam and the rich texture of raw burlap sacks. The atmosphere is sophisticated, artisanal, and intensely focused on the craft of coffee alchemy."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhowUMz97_mPObdWWn0ZsNhqpucjCeTeAarQyiUWKNO8E3u8y0N7S73lcSeWVXgf3REzcpKE8xCQb4qUmFDC7z-AEgjdVDhIjM7GwtV9coaOzQmGzW0fcpwj0fjUcwozQPepUhx4Zx8im_ojbEyYSH7wghE1vT8XCfmri5NYgZsEKVnwl0S2VyqCEiPWC0DjflOD-ysY16XCzzruzsDaRdef8BpPhEE1qxUhTT94GsCFb0WjVSb5t3_v6DwCJymu_CZH21IQEnDCU"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"
+          ></div>
+        </div>
+        <div class="relative z-10 text-center px-4">
+          <span
+            class="font-label uppercase tracking-[0.4em] text-primary mb-6 block"
+            >Nghệ Thuật Chuyển Hóa</span
+          >
+          <h1
+            class="font-display text-5xl md:text-8xl font-bold tracking-tighter text-tertiary-fixed mb-8 leading-none"
+          >
+            Nhà Rang Alchemist
+          </h1>
+          <p
+            class="max-w-2xl mx-auto text-on-surface-variant text-lg md:text-xl font-light leading-relaxed"
+          >
+            Nơi những hạt cà phê thô được đánh thức qua lửa và sự chính xác
+            tuyệt đối của những nghệ nhân rang xay.
+          </p>
+        </div>
+      </section>
+      <!-- Philosophy Section - Asymmetric Bento -->
+      <section class="py-24 px-8 max-w-screen-2xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+          <div
+            class="md:col-span-7 bg-surface-container-low p-12 rounded-xl flex flex-col justify-center"
+          >
+            <h2
+              class="font-headline text-4xl font-bold text-tertiary mb-6 tracking-tight"
+            >
+              Triết Lý Của Lửa
+            </h2>
+            <p class="text-on-surface-variant leading-loose mb-8 text-lg">
+              Tại Alchemist, chúng tôi không chỉ rang cà phê; chúng tôi giải
+              phóng linh hồn của từng vùng đất. Quy trình bắt đầu từ việc thấu
+              hiểu cấu trúc tế bào của hạt xanh, điều chỉnh biểu đồ nhiệt độ
+              từng giây để đạt được điểm rơi hoàn hảo của hương vị. Sự kết hợp
+              giữa trực giác nghệ nhân và công nghệ kiểm soát nhiệt hiện đại tạo
+              nên những mẻ rang độc bản.
+            </p>
+            <div class="flex gap-4">
+              <div
+                class="h-px bg-outline-variant/30 flex-grow self-center"
+              ></div>
+              <span class="font-label italic text-primary-container"
+                >Est. 2024</span
+              >
+            </div>
+          </div>
+          <div
+            class="md:col-span-5 rounded-xl overflow-hidden h-full min-h-[400px]"
+          >
+            <img
+              class="w-full h-full object-cover"
+              data-alt="Close-up of a master roaster in a dark, industrial apron meticulously checking a sample of roasted coffee beans from a trier. The lighting is dramatic and warm, highlighting the texture of the beans and the concentrated expression of the artisan. The background is a blurred workshop with vintage-modern aesthetics and high-end roasting equipment in deep charcoal tones."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7uuWN9VHaNk7BDkh_E-ZJd34SAXsSXJ3DDSOqlgnsO725-2YDhOzefH_5n7VSCajsCf0We58CNvKge9YLfQOPYV8fzqclJSqPw-yTudqXPmMTT1jSYPKuGjK5K7qeFZM-wBr0VXkBuzNmGsQwbnsITsNecFrJJt3R8LFO_Jpn_bHxzR2NM7iRj-6EfbT9R9TnVnCNZ96sE0ry17SdE1KZ4-hK6DEj2B5hsKi0ytXbDaCYPJ8kRe9sgqM1I8FhNfAfKdemZ8Y5ZBM"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Roast Levels - Tonal Cards -->
+      <section class="py-24 bg-surface-container-lowest">
+        <div class="max-w-screen-2xl mx-auto px-8">
+          <div class="mb-16 text-center">
+            <h2
+              class="font-display text-4xl font-bold text-on-surface mb-4 uppercase tracking-widest"
+            >
+              Cấp Độ Của Sự Hoàn Hảo
+            </h2>
+            <p class="text-on-surface-variant font-light">
+              Ba giai đoạn chuyển hóa, ba tầng cảm xúc khác biệt.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Light Roast -->
+            <div
+              class="group bg-surface-container p-10 rounded-xl hover:bg-surface-container-high transition-all duration-500"
+            >
+              <span
+                class="text-primary text-5xl font-display font-extrabold mb-6 block opacity-20 group-hover:opacity-100 transition-opacity"
+                >01</span
+              >
+              <h3 class="font-headline text-2xl font-bold text-primary mb-4">
+                Light Roast
+              </h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                Giữ trọn vẹn đặc tính của vùng trồng. Axit thanh khiết, hương
+                hoa cỏ và trái cây nhiệt đới rõ nét. Phù hợp cho những tâm hồn
+                tìm kiếm sự tinh tế.
+              </p>
+              <div
+                class="w-full h-2 bg-surface-variant rounded-full overflow-hidden"
+              >
+                <div class="bg-primary h-full w-1/3"></div>
+              </div>
+            </div>
+            <div
+              class="group bg-surface-container p-10 rounded-xl hover:bg-surface-container-high transition-all duration-500"
+            >
+              <span
+                class="text-secondary text-5xl font-display font-extrabold mb-6 block opacity-20 group-hover:opacity-100 transition-opacity"
+                >02</span
+              >
+              <h3 class="font-headline text-2xl font-bold text-secondary mb-4">
+                Medium Roast
+              </h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                Sự cân bằng tuyệt đối giữa vị ngọt caramel và độ dày (body).
+                Hương hạt rang và chocolate bắt đầu xuất hiện mạnh mẽ hơn.
+              </p>
+              <div
+                class="w-full h-2 bg-surface-variant rounded-full overflow-hidden"
+              >
+                <div class="bg-secondary h-full w-2/3"></div>
+              </div>
+            </div>
+            <!-- Dark Roast -->
+            <div
+              class="group bg-surface-container p-10 rounded-xl hover:bg-surface-container-high transition-all duration-500"
+            >
+              <span
+                class="text-primary-container text-5xl font-display font-extrabold mb-6 block opacity-20 group-hover:opacity-100 transition-opacity"
+                >03</span
+              >
+              <h3
+                class="font-headline text-2xl font-bold text-primary-container mb-4"
+              >
+                Dark Roast
+              </h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                Mạnh mẽ, trầm lắng với nốt hương gia vị và khói nhẹ. Độ axit
+                thấp nhất, nhường chỗ cho hậu vị kéo dài đầy quyến rũ.
+              </p>
+              <div
+                class="w-full h-2 bg-surface-variant rounded-full overflow-hidden"
+              >
+                <div class="bg-primary-container h-full w-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Artisans & Craft -->
+      <section class="py-24 px-8 max-w-screen-2xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+          <div class="relative">
+            <div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
+              <img
+                class="w-full h-full object-cover"
+                data-alt="A master artisan coffee roaster adjusting the dials of a sophisticated, high-end roasting machine. The setting is a clean, dark-themed industrial workshop with warm task lighting. The roaster wears a leather apron, and their hands are captured in a moment of precision. The overall aesthetic is one of luxury craftsmanship and obsessive attention to detail, bathed in deep charcoal and amber tones."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3tlOblXsqxt_PQEWAoEbTBsed-szzOJnsCUMa_wYTA34izQJdRt_nRrn7RZjcfWySqFBmQY8SVcZqHmq7Ly2Sdbuy5wqX_TqJIbTzxPdNSFUGgqE1w4H1d5mi1RuerhSJjGd036Ops2iVOvnIdr3i33PDTV0u1vNEOJpRtkvRHcYZYqc9-q951YloMHF5y483zYEHFs_0MXTMbsRRUXoyinSfDs2pvyhwBW_K4bY8l4Cz9u_7nLxjhmcvzW2ua6-g7o5lXHYEjYU"
+              />
+            </div>
+            <div
+              class="absolute -bottom-10 -right-10 bg-primary p-8 rounded-xl hidden md:block"
+            >
+              <p class="font-display text-4xl font-bold text-on-primary">15+</p>
+              <p
+                class="font-label text-[10px] uppercase tracking-widest text-on-primary"
+              >
+                Năm Kinh Nghiệm
+              </p>
+            </div>
+          </div>
+          <div>
+            <span
+              class="font-label uppercase tracking-widest text-primary mb-4 block"
+              >Nhân Tố Con Người</span
+            >
+            <h2
+              class="font-display text-5xl font-bold text-on-surface mb-8 leading-tight"
+            >
+              Những Nghệ Nhân <br />Của Alchemist
+            </h2>
+            <p class="text-on-surface-variant text-lg leading-loose mb-10">
+              Phía sau mỗi mẻ rang là sự tận tụy của đội ngũ chuyên gia. Chúng
+              tôi tin rằng máy móc dù hiện đại đến đâu cũng không thể thay thế
+              được khứu giác nhạy bén và đôi tay tài hoa của con người. Tại đây,
+              công việc rang xay là một nghi lễ thường nhật.
+            </p>
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-primary"
+                  >precision_manufacturing</span
+                >
+                <div>
+                  <h4 class="font-headline font-bold text-tertiary">
+                    Thiết Bị Giesen &amp; Loring
+                  </h4>
+                  <p class="text-on-surface-variant text-sm">
+                    Hệ thống rang xay hàng đầu thế giới cho độ ổn định tuyệt
+                    đối.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-primary"
+                  >analytics</span
+                >
+                <div>
+                  <h4 class="font-headline font-bold text-tertiary">
+                    Phân Tích Dữ Liệu
+                  </h4>
+                  <p class="text-on-surface-variant text-sm">
+                    Kiểm soát profiling qua phần mềm chuyên dụng cho từng lô
+                    hạt.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Section -->
+      <section class="py-24 px-8 mb-12">
+        <div
+          class="max-w-screen-xl mx-auto bg-surface-container-high rounded-xl p-16 text-center relative overflow-hidden"
+        >
+          <div class="absolute top-0 right-0 p-10 opacity-10">
+            <span class="material-symbols-outlined text-[120px]">coffee</span>
+          </div>
+          <h2 class="font-display text-4xl font-bold text-tertiary mb-6">
+            Trải Nghiệm Hương Vị Ngay Tại Nhà
+          </h2>
+          <p class="max-w-xl mx-auto text-on-surface-variant mb-10">
+            Đặt hàng những mẻ rang mới nhất vừa ra khỏi lò để thưởng thức trọn
+            vẹn tinh hoa của Alchemist Coffee.
+          </p>
+          <div class="flex flex-col md:flex-row justify-center gap-4">
+            <button
+              class="bg-primary text-on-primary px-10 py-4 rounded-full font-label uppercase tracking-widest text-xs font-bold hover:scale-105 transition-transform"
+            >
+              Khám Phá Cửa Hàng
+            </button>
+            <button
+              class="border border-outline-variant text-on-surface px-10 py-4 rounded-full font-label uppercase tracking-widest text-xs font-bold hover:bg-surface-bright transition-colors"
+            >
+              Đăng Ký Thành Viên
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full py-20 px-8"
+    >
+      <div
+        class="flex flex-col md:flex-row justify-between items-start gap-12 max-w-screen-2xl mx-auto"
+      >
+        <div class="max-w-sm">
+          <div
+            class="text-xl font-headline font-bold text-on-surface mb-6 uppercase tracking-widest"
+          >
+            Alchemist Coffee
+          </div>
+          <p class="font-body text-sm text-on-surface-variant leading-relaxed">
+            © 2024 Alchemist Coffee. Crafted for the Modern Alchemist. Nghệ
+            thuật rang xay thủ công tại tâm điểm của sự sang trọng.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+          <div>
+            <h5
+              class="font-label tracking-widest uppercase text-[10px] text-primary mb-6"
+            >
+              Thông Tin
+            </h5>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  class="font-body text-sm text-on-surface-variant hover:text-tertiary transition-colors"
+                  href="#"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  class="font-body text-sm text-on-surface-variant hover:text-tertiary transition-colors"
+                  href="#"
+                  >Shipping &amp; Returns</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5
+              class="font-label tracking-widest uppercase text-[10px] text-primary mb-6"
+            >
+              Hợp Tác
+            </h5>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  class="font-body text-sm text-on-surface-variant hover:text-tertiary transition-colors"
+                  href="#"
+                  >Wholesale</a
+                >
+              </li>
+              <li>
+                <a
+                  class="font-body text-sm text-on-surface-variant hover:text-tertiary transition-colors"
+                  href="#"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-2">
+            <h5
+              class="font-label tracking-widest uppercase text-[10px] text-primary mb-6"
+            >
+              Newsletter
+            </h5>
+            <div class="flex gap-2">
+              <input
+                class="bg-surface-container text-on-surface border-none rounded-full px-6 py-3 w-full text-sm focus:ring-1 focus:ring-primary"
+                placeholder="Email của bạn"
+                type="email"
+              />
+              <button
+                class="bg-primary-container text-on-primary-container p-3 rounded-full hover:opacity-80 transition-opacity"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >arrow_forward</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

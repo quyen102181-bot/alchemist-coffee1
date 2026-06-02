@@ -1,0 +1,615 @@
+<!doctype html>
+
+<html class="dark" lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600;700;800&amp;family=Manrope:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 48;
+      }
+      .font-headline {
+        font-family: "Epilogue", sans-serif;
+      }
+      .font-display {
+        font-family: "Epilogue", sans-serif;
+      }
+      .font-body {
+        font-family: "Manrope", sans-serif;
+      }
+      .font-label {
+        font-family: "Manrope", sans-serif;
+      }
+
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+    </style>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface-variant": "#d6c3b3",
+              "on-surface": "#dbe5df",
+              "surface-container-lowest": "#07100d",
+              "tertiary-fixed-dim": "#d4c5aa",
+              "surface-variant": "#2d3733",
+              error: "#ffb4ab",
+              "inverse-on-surface": "#29322f",
+              "on-primary-container": "#5a3400",
+              primary: "#ffb869",
+              "secondary-fixed": "#ffdbcb",
+              tertiary: "#d4c5aa",
+              secondary: "#fdb795",
+              "tertiary-container": "#b4a68d",
+              "secondary-fixed-dim": "#fdb795",
+              "on-background": "#dbe5df",
+              "surface-tint": "#ffb869",
+              outline: "#9e8e7f",
+              "on-tertiary-fixed": "#221b09",
+              "on-error-container": "#ffdad6",
+              "surface-container-highest": "#2d3733",
+              "on-primary-fixed-variant": "#673d00",
+              "surface-container": "#18211e",
+              "on-error": "#690005",
+              "on-secondary-fixed-variant": "#6a3a21",
+              "on-tertiary-container": "#453c28",
+              "primary-fixed-dim": "#ffb869",
+              "primary-fixed": "#ffdcbb",
+              "on-secondary-fixed": "#341100",
+              "on-secondary-container": "#eda988",
+              "tertiary-fixed": "#f1e1c5",
+              "surface-container-low": "#141d1a",
+              "surface-container-high": "#232c29",
+              "outline-variant": "#514438",
+              "inverse-primary": "#875204",
+              "secondary-container": "#6d3c23",
+              "surface-dim": "#0c1512",
+              "on-primary-fixed": "#2b1700",
+              "error-container": "#93000a",
+              "primary-container": "#dd9a4c",
+              "on-tertiary-fixed-variant": "#504631",
+              surface: "#0c1512",
+              "inverse-surface": "#dbe5df",
+              "on-tertiary": "#382f1d",
+              "on-secondary": "#4f250d",
+              background: "#0c1512",
+              "surface-bright": "#323b38",
+              "on-primary": "#482900",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            fontFamily: {
+              headline: ["Epilogue"],
+              display: ["Epilogue"],
+              body: ["Manrope"],
+              label: ["Manrope"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden"
+  >
+    <!-- Top Navigation Bar -->
+    <header
+      class="w-full top-0 sticky bg-surface/90 dark:bg-surface/90 backdrop-blur-xl z-50"
+    >
+      <nav
+        class="flex justify-between items-center w-full px-8 py-6 max-w-screen-2xl mx-auto"
+      >
+        <div
+          class="text-2xl font-headline font-bold tracking-tighter text-primary"
+        >
+          Alchemist Coffee
+        </div>
+        <div class="hidden md:flex items-center gap-10">
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label uppercase tracking-widest text-xs"
+            href="GiaoCaPhe.html"
+            >Thực Đơn</a
+          >
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label uppercase tracking-widest text-xs"
+            href="NhaRang.html"
+            >Nhà Rang</a
+          >
+          <a
+            class="text-primary font-bold border-b border-primary pb-1 font-label uppercase tracking-widest text-xs"
+            href="CauChuyen.html"
+            >Câu Chuyện</a
+          >
+          <a
+            class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label uppercase tracking-widest text-xs"
+            href="NhatKy.html"
+            >Nhật Ký</a
+          >
+        </div>
+        <div class="flex items-center gap-6">
+          <button
+            class="text-on-surface hover:text-primary transition-all duration-300"
+          >
+            <span class="material-symbols-outlined">shopping_bag</span>
+          </button>
+          <button
+            class="bg-primary hover:bg-primary-container text-on-primary font-label uppercase tracking-widest text-[10px] px-6 py-3 rounded-full transition-all active:scale-95"
+          >
+            Shop Now
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero Section: Visual Storytelling Entry -->
+      <section
+        class="relative h-[921px] flex items-center justify-center overflow-hidden px-8"
+      >
+        <div class="absolute inset-0 z-0">
+          <img
+            class="w-full h-full object-cover opacity-60"
+            data-alt="A cinematic, low-light wide shot of a misty coffee plantation at dawn in the high altitudes of Da Lat. Soft amber sunlight breaks through the deep charcoal clouds, illuminating the lush green leaves with a warm, golden glow. The atmosphere is ethereal and serene, perfectly capturing the high-end editorial aesthetic of Alchemist Coffee with its rich tonal depth and organic textures."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsREStGApObbGiTB5ynwyslfWXwF2Uv_37ValOwNFuS16htX584U0Oxqw3M06vqRaHVFO0ugj4-LJlJGOa22fmmZNy2sA_BZU6m8PVsxqVkU9rL5bmH2u0FfIddtOOTAKNXNYJXclct4nptlTCTvG2jQM3N54dNtH-DxA4YEdVaVlrnCsZ1U1WE12242HVllCaZeHGJOoQhLPh4peqfbT-WGEUSdHHN0uLmDEuPJkmuAReDsLwCYPdMocCClW4YJ1ku14DZV5BCYA"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-surface/40"
+          ></div>
+        </div>
+        <div class="relative z-10 text-center max-w-4xl">
+          <span
+            class="font-label uppercase tracking-[0.3em] text-primary mb-6 block"
+            >Kể Từ Năm 2014</span
+          >
+          <h1
+            class="text-6xl md:text-8xl font-display font-extrabold tracking-tighter text-on-surface leading-none mb-8"
+          >
+            Hành Trình <br />
+            <span class="italic text-tertiary">Biến Đổi</span>
+          </h1>
+          <p
+            class="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed"
+          >
+            Tại Alchemist, chúng tôi không chỉ pha chế cà phê. Chúng tôi tinh
+            lọc bản sắc của từng vùng đất, biến những hạt mầm thô mộc thành
+            những tác phẩm nghệ thuật dạng lỏng.
+          </p>
+        </div>
+        <div
+          class="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce"
+        >
+          <span class="material-symbols-outlined text-primary text-3xl"
+            >expand_more</span
+          >
+        </div>
+      </section>
+      <!-- Philosophy Section: The Modern Alchemist -->
+      <section class="py-32 px-8 bg-surface">
+        <div
+          class="max-w-screen-2xl mx-auto grid md:grid-cols-2 gap-20 items-center"
+        >
+          <div class="space-y-12">
+            <div class="space-y-4">
+              <h2
+                class="text-4xl md:text-5xl font-display font-bold text-on-surface tracking-tight leading-tight"
+              >
+                Triết lý <br />"Modern Alchemist"
+              </h2>
+              <div class="w-12 h-1 bg-primary"></div>
+            </div>
+            <p class="text-on-surface-variant text-lg leading-loose font-light">
+              Như những nhà giả kim cổ đại tìm cách biến kim loại thành vàng,
+              chúng tôi dành trọn tâm huyết để khai phá tiềm năng vô hạn của hạt
+              cà phê. Đó là sự kết hợp giữa
+              <span class="text-primary font-semibold">Khoa học chính xác</span>
+              và
+              <span class="text-secondary font-semibold"
+                >Nghệ thuật cảm xúc</span
+              >.
+            </p>
+            <div class="grid grid-cols-2 gap-8">
+              <div
+                class="p-8 bg-surface-container-low rounded-lg border-l-2 border-primary"
+              >
+                <h3 class="font-headline text-2xl mb-2">01. Tinh Tuyển</h3>
+                <p class="text-sm text-on-surface-variant">
+                  Chỉ 1% sản lượng cà phê thế giới đạt tiêu chuẩn Alchemist.
+                </p>
+              </div>
+              <div
+                class="p-8 bg-surface-container-low rounded-lg border-l-2 border-secondary"
+              >
+                <h3 class="font-headline text-2xl mb-2">02. Biến Đổi</h3>
+                <p class="text-sm text-on-surface-variant">
+                  Quy trình rang thủ công bảo tồn trọn vẹn hương vị bản địa.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="relative group">
+            <div
+              class="absolute -inset-4 bg-primary/10 rounded-xl blur-2xl group-hover:bg-primary/20 transition-all"
+            ></div>
+            <img
+              class="relative rounded-xl w-full h-[600px] object-cover shadow-2xl"
+              data-alt="A close-up, high-contrast editorial photograph of a professional roaster monitoring a modern, matte-black coffee roasting machine. The lighting is dramatic and moody, with warm amber sparks and soft steam rising from the cooling tray. The scene feels intentional and tactile, emphasizing the precise science and craftsmanship of the Alchemist roasting process."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3y7O7E8PM8QSvUUv3y8UqFpy1wce7jhS0RmMmI4GiWQg6LONcBUEK_8z6I6cGskSlL9P6y3CenkxngsyDNv7twD75RwIBv1gAF0jERO-QMw2qzjmAE_QQZEM_kns_1LjUPpRpWTV0BpESdPilki3KD2JgGdF8VVjzT2MfY1j3fI9ZDF2saWnkUWMh59QCuRZjF0hrL9cluFAbVrAziPViZ9Vu0TxH87TR1w68-_3KnuyQiSRACszahW3Y1sVUWG1V4IzG7BH_Rwk"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Visual Timeline: The Highland Quest -->
+      <section class="py-32 bg-surface-container-low overflow-hidden">
+        <div class="max-w-screen-2xl mx-auto px-8">
+          <div class="mb-20 text-center">
+            <h2 class="text-5xl font-display font-bold text-on-surface mb-4">
+              Hành Trình Tìm Kiếm
+            </h2>
+            <p class="text-on-surface-variant">
+              Vượt qua những cung đường đèo hiểm trở đến những vùng nguyên liệu
+              quý hiếm nhất.
+            </p>
+          </div>
+          <!-- Horizontal Timeline -->
+          <div class="flex gap-8 overflow-x-auto no-scrollbar pb-12 snap-x">
+            <!-- Milestone 1 -->
+            <div class="min-w-[350px] md:min-w-[450px] snap-center">
+              <div class="bg-surface-container p-4 rounded-xl space-y-6">
+                <div class="h-64 rounded-lg overflow-hidden relative">
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="Vintage-style archival photography of a remote mountainous region in Vietnam. The landscape is characterized by sharp peaks, deep valleys, and terraced coffee fields shrouded in a thick morning fog. The color palette is muted with earthy browns and dark greens, creating a sense of history and rugged exploration for the Alchemist origins story."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJnIBCR7auGJtSad11senSoF7MjLxonWZGlAAlshNHO1y0X3Chbf9X_y6MP-YihIfX2IKM8gJ9hG4i7QQWy4Ix59nGtHhisw6RLarmJBovxoEszQy8L4r-oZQusqKaLwXsesyUukwbuMZPA3pxwKt4xrOE_s0_GNs3iDZYsk5Em8vGOdwntYzC3dpewMP4xImPzmjFkgxGvxId8JY_K9A0TZ7zKPgKdBYoxMJ-zoDj7XhmXihf1wPmYzsiIqxFCoAI8KyoWCzywwA"
+                  />
+                  <div
+                    class="absolute top-4 left-4 bg-primary text-on-primary px-4 py-1 rounded-full font-label text-xs font-bold"
+                  >
+                    2014
+                  </div>
+                </div>
+                <div class="px-2">
+                  <h4 class="text-2xl font-headline font-bold mb-3">
+                    Khởi Đầu Tại Cầu Đất
+                  </h4>
+                  <p class="text-on-surface-variant text-sm leading-relaxed">
+                    Nơi những cây cà phê Arabica cổ thụ đầu tiên được tìm thấy ở
+                    độ cao 1.650m, mở ra giấc mơ về dòng cà phê đặc sản Việt
+                    Nam.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Milestone 2 -->
+            <div class="min-w-[350px] md:min-w-[450px] snap-center">
+              <div class="bg-surface-container p-4 rounded-xl space-y-6">
+                <div class="h-64 rounded-lg overflow-hidden relative">
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="A macro shot of vibrant, sun-ripened red coffee cherries held in weathered, hardworking hands. The lighting is warm and golden, casting long shadows that highlight the texture of the skin and the organic imperfections of the cherries. The aesthetic is tactile and high-end, focusing on the raw beauty of the source material."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5zpJ6Qaa5mNm8oYwu-JxgK6LbA1dhEydLcG6MOVjgYoOslC2FSf6dWzUItrJQ8-2OrURQWS0xJ9Y2Neh2VH7WbKU1QUGYmEbFg2nm9fXmVFf8VnbEFiiPZ_XCz9ujGYyEzyM1p4Sv0q2baAXRZncvb2xiRhQ9rjP8TcA4Tv21Q1O8YvchwZUw69u_RYF9T_jH6NX6rBengqwyL6eCnhL1eaYMaka_nHN8Y3-CMQcWPwySvqUGoh8SWA85543aBxAXojXANrQyHQc"
+                  />
+                  <div
+                    class="absolute top-4 left-4 bg-primary text-on-primary px-4 py-1 rounded-full font-label text-xs font-bold"
+                  >
+                    2017
+                  </div>
+                </div>
+                <div class="px-2">
+                  <h4 class="text-2xl font-headline font-bold mb-3">
+                    Xây Dựng "Lò Luyện"
+                  </h4>
+                  <p class="text-on-surface-variant text-sm leading-relaxed">
+                    Xưởng rang đầu tiên tại Sài Gòn ra đời. Đây không chỉ là nơi
+                    sản xuất, mà là phòng thí nghiệm để thử nghiệm các phương
+                    thức lên men độc bản.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Milestone 3 -->
+            <div class="min-w-[350px] md:min-w-[450px] snap-center">
+              <div class="bg-surface-container p-4 rounded-xl space-y-6">
+                <div class="h-64 rounded-lg overflow-hidden relative">
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="An editorial interior shot of a minimalist, high-end coffee boutique. The design features dark charcoal walls, warm amber lighting, and sleek wood accents. The space feels like a gallery for coffee, with clean lines and intentional negative space, reflecting the modern and sophisticated brand identity of Alchemist Coffee."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY4rOKylN3_YTFXV1G1u90PWHkLAVVODrx0O9h8oYtLXHHzUUhZckJk82qvuwTrYwIB2jlUEBZZowEeJhVqEBkZl-4VTNLmdlmvQFmQQeSDrXAfv63_S_IfIx--K58EWS3oGP10TIsOP004hAgtZwPA2cRtysIPbadqaa0iODgeKn0s1G8FaCqITQn8SzLqstloS4_lc5cobB97Md8rHdq_66Xw44fSWXhCw4MVk6P2MfgScNdLggKLg46VzCEHq2zJkDwAhGZV3o"
+                  />
+                  <div
+                    class="absolute top-4 left-4 bg-primary text-on-primary px-4 py-1 rounded-full font-label text-xs font-bold"
+                  >
+                    2021
+                  </div>
+                </div>
+                <div class="px-2">
+                  <h4 class="text-2xl font-headline font-bold mb-3">
+                    Vươn Tầm Quốc Tế
+                  </h4>
+                  <p class="text-on-surface-variant text-sm leading-relaxed">
+                    Hạt cà phê "Alchemist Signature" chính thức xuất hiện tại
+                    các cửa hàng Specialty Coffee tại Tokyo và London, khẳng
+                    định giá trị cà phê Việt.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Milestone 4 -->
+            <div class="min-w-[350px] md:min-w-[450px] snap-center">
+              <div class="bg-surface-container p-4 rounded-xl space-y-6">
+                <div class="h-64 rounded-lg overflow-hidden relative">
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="A scenic and atmospheric shot of a modern, sustainable coffee farm integrated into a natural forest. The architecture of the farm buildings is minimal and organic, using local stone and wood. The overall mood is harmonious and peaceful, lit by the soft, diffuse light of an overcast afternoon on the plateau."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD03KVauwwOqyGPQVJyY_QGq9Wa7rBGm_meTuVQDhHkLc_hF0kZnnE6QqhDtEx94seXtjbvDhJ2pEMhYMeUjVz7E4A8S5WILFF5Z0aQkFCtRmyf_bWCTPdavsa9kYElag8Xpa-4d3G_kZgzG0JcbELjMaTHUjQGTvJ0h_RG1XdYxxI3QCUBpj0W3LvSrpKK818_1cju6KKTJdmZn9K1XfV-yfcvLxJCQzN7iFHC7oXpC_rFJoCR6ob4AM5BxJZTO5_AUYKXZiyCpeI"
+                  />
+                  <div
+                    class="absolute top-4 left-4 bg-primary text-on-primary px-4 py-1 rounded-full font-label text-xs font-bold"
+                  >
+                    Hiện Tại
+                  </div>
+                </div>
+                <div class="px-2">
+                  <h4 class="text-2xl font-headline font-bold mb-3">
+                    Vững Bước Tương Lai
+                  </h4>
+                  <p class="text-on-surface-variant text-sm leading-relaxed">
+                    Chúng tôi tiếp tục đồng hành cùng nông dân, cam kết nông
+                    nghiệp bền vững và bảo tồn đa dạng sinh học tại mỗi vùng
+                    nguyên liệu.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Team Section: The Craftspeople -->
+      <section class="py-32 px-8 bg-surface">
+        <div
+          class="max-w-screen-2xl mx-auto flex flex-col md:flex-row items-end justify-between gap-12 mb-20"
+        >
+          <div class="max-w-2xl">
+            <span
+              class="font-label uppercase tracking-widest text-primary text-sm"
+              >Đội Ngũ</span
+            >
+            <h2
+              class="text-5xl md:text-7xl font-display font-bold text-on-surface mt-4 leading-tight"
+            >
+              Những Bàn Tay <br />
+              <span class="text-tertiary">Kiến Tạo</span>
+            </h2>
+          </div>
+          <p class="text-on-surface-variant text-lg max-w-sm mb-4">
+            Mỗi tách cà phê là thành quả của sự phối hợp nhịp nhàng giữa
+            Roasters, Baristas và Farmers.
+          </p>
+        </div>
+        <div
+          class="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8"
+        >
+          <!-- Team Member 1 -->
+          <div class="group relative overflow-hidden rounded-xl">
+            <img
+              class="w-full h-[500px] object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+              data-alt="A portrait of a male master roaster with a focused expression, wearing a minimalist dark apron. He is standing in a dimly lit studio with a warm amber spotlight hitting his face and shoulders. The background is softly blurred, showing glimpses of coffee sacks and equipment, creating a professional and intimate atmosphere."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqmBT4OrG97vykvbJoH-eFIgW1hkE0HVmNX98FB9NfBI5agKasag-LIWgAUrT928_ef1l7DSHplVSlKEMRvVN7mU5bIkYM1lzDq2W8sXXoqZCwEQ3Ufm3dzg-d11K8ylnNfVys9qjROybnDZtBghy-PjqhTcZE4K0HkZfWHC3oAwOi8RItvGtTcWpxiOiBaOlEdZZraa6W_jooj5DGERdCXSwuyV8jfrZ889ApSiSvoCMHwTYCEYRqUkiOIDDBqOynUENb_unzN9k"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500"
+            >
+              <span
+                class="font-label text-primary text-xs uppercase tracking-widest"
+                >Master Roaster</span
+              >
+              <h4 class="text-3xl font-headline font-bold text-on-surface mt-2">
+                Trần Minh
+              </h4>
+              <p
+                class="text-on-surface-variant text-sm mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              >
+                12 năm kinh nghiệm giải mã hương vị từ các vùng cao nguyên.
+              </p>
+            </div>
+          </div>
+          <!-- Team Member 2 -->
+          <div class="group relative overflow-hidden rounded-xl">
+            <img
+              class="w-full h-[500px] object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+              data-alt="A portrait of a young female barista in a high-end specialty coffee shop. She is carefully pouring hot water into a ceramic dripper, her movements elegant and precise. The lighting is soft and flattering, highlighting the steam rising from the coffee and the premium texture of the shop's interior. The overall feel is one of dedication and artful service."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSTGUJZwCZT1CbBI6JGV0dylkNetFljZfB48ItayWlunxjGMwzf8PD4l9mJ_g36DBEwyPCyM424jTXj7_JwO8PYvh45U_8aJZZLcgd3gMI-Lr3ShnrQTaxBv11Jg99OnONTCimabB6Ts6U5lxnZfSSg0kXL_2BxT85Kl6ifnszXuNSwzWMcvTYaKNzi5OFcri7nm8HvvrLUV12O2O64kYS4eP8RnaNZvWZLEwroU6rT9UfVhzXVUmtzeHL4rBu7oXOoL85ph1UrdM"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500"
+            >
+              <span
+                class="font-label text-primary text-xs uppercase tracking-widest"
+                >Head Barista</span
+              >
+              <h4 class="text-3xl font-headline font-bold text-on-surface mt-2">
+                Lê Thảo
+              </h4>
+              <p
+                class="text-on-surface-variant text-sm mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              >
+                Nhà vô địch Brewers Cup, người mang đến trải nghiệm thưởng lãm
+                tinh tế.
+              </p>
+            </div>
+          </div>
+          <!-- Team Member 3 -->
+          <div class="group relative overflow-hidden rounded-xl">
+            <img
+              class="w-full h-[500px] object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+              data-alt="A candid shot of a group of coffee farmers and experts discussing at a high-altitude farm. They are surrounded by coffee trees under a dramatic sky. The style is documentary-editorial, with rich earth tones and a sense of shared purpose and community. The composition is asymmetrical and dynamic, fitting the modern alchemist brand."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNrjCuvQBko7-CnIe9EqqwPnEgEVaM_t0X--uLGq03N5D4PNGJk18-KExyELC9hGfLQQYZHw8d6NDxZ5gVu0yvjboJJUXLOEMqZpFgOkxxcMaGqkRF--STJ5yiKkbe7KapFuiCTIRl9yxIe3bbn813fY9mPF9KbQ45xdPlWfTZWzIzgDuhnAnGmRNHfqV-aMatjDh1RaBU9sE7kenLzK9Q1i5Ht1QgLmZFqNr8U5MfmUXWHZ59TOs5WdefRqr-WflrGvvvdeWcIhQ"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500"
+            >
+              <span
+                class="font-label text-primary text-xs uppercase tracking-widest"
+                >Sourcing Specialist</span
+              >
+              <h4 class="text-3xl font-headline font-bold text-on-surface mt-2">
+                Dương Nguyễn
+              </h4>
+              <p
+                class="text-on-surface-variant text-sm mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              >
+                Người tìm đường, kết nối Alchemist với các nông hộ tâm huyết
+                nhất.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Call to Action -->
+      <section class="py-40 bg-surface-container-lowest text-center px-8">
+        <div class="max-w-3xl mx-auto space-y-12">
+          <h2
+            class="text-4xl md:text-6xl font-display font-bold text-on-surface tracking-tight"
+          >
+            Trở Thành Một Phần <br />
+            Của Câu Chuyện.
+          </h2>
+          <div class="flex flex-col md:flex-row gap-6 justify-center">
+            <button
+              class="bg-primary text-on-primary px-12 py-5 rounded-full font-label uppercase tracking-widest text-sm font-bold shadow-xl shadow-primary/10 hover:shadow-primary/20 transition-all hover:scale-105 active:scale-95"
+            >
+              Khám Phá Menu
+            </button>
+            <button
+              class="bg-surface-container-high text-primary px-12 py-5 rounded-full font-label uppercase tracking-widest text-sm font-bold hover:bg-surface-container transition-all active:scale-95"
+            >
+              Ghé Thăm Xưởng Rang
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="w-full py-20 px-8 bg-surface-container-lowest border-t border-outline-variant/10"
+    >
+      <div
+        class="flex flex-col md:flex-row justify-between items-start gap-12 max-w-screen-2xl mx-auto"
+      >
+        <div class="space-y-6">
+          <div class="text-xl font-headline font-bold text-on-surface">
+            Alchemist Coffee
+          </div>
+          <p
+            class="text-on-surface-variant font-body text-sm max-w-xs leading-relaxed"
+          >
+            Tầng 42, Bitexco Financial Tower, Quận 1, TP. Hồ Chí Minh.<br />
+            contact@alchemist.coffee
+          </p>
+        </div>
+        <div class="flex flex-col md:flex-row gap-16">
+          <div class="space-y-4">
+            <span
+              class="font-label tracking-widest uppercase text-[10px] text-primary"
+              >Pháp Lý</span
+            >
+            <ul class="space-y-2">
+              <li>
+                <a
+                  class="text-on-surface-variant hover:text-tertiary transition-colors text-sm"
+                  href="#"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-on-surface-variant hover:text-tertiary transition-colors text-sm"
+                  href="#"
+                  >Shipping &amp; Returns</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="space-y-4">
+            <span
+              class="font-label tracking-widest uppercase text-[10px] text-primary"
+              >Đối Tác</span
+            >
+            <ul class="space-y-2">
+              <li>
+                <a
+                  class="text-on-surface-variant hover:text-tertiary transition-colors text-sm"
+                  href="#"
+                  >Wholesale</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-on-surface-variant hover:text-tertiary transition-colors text-sm"
+                  href="#"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="md:text-right space-y-4">
+          <div class="flex gap-4 md:justify-end">
+            <a
+              class="text-on-surface-variant hover:text-primary transition-colors"
+              href="#"
+            >
+              <span class="material-symbols-outlined">public</span>
+            </a>
+            <a
+              class="text-on-surface-variant hover:text-primary transition-colors"
+              href="#"
+            >
+              <span class="material-symbols-outlined">alternate_email</span>
+            </a>
+          </div>
+          <p class="text-on-surface-variant font-body text-sm">
+            © 2024 Alchemist Coffee. Crafted for the Modern Alchemist.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
